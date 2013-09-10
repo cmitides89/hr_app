@@ -1,5 +1,8 @@
 HrApp::Application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks"}
+
+  resources :updates
+  root to: 'updates#new'
   
 
   # The priority is based upon order of creation:
